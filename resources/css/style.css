@@ -1,0 +1,623 @@
+body{
+	background-image: url('../images/Sword_Fire.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+form{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.clear{
+	clear: both;	
+}
+
+#arena-container{
+	height: 430px;
+	margin: 70px auto 0 auto;
+    width: 1000px;
+	cursor : default;
+}
+
+#player{
+	width: 90px;
+	height: 90px;
+	/*border-radius: 50%;*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	position:absolute; 
+	top:140px; left:140px;       
+}
+
+#arena{
+	box-sizing: border-box;
+	float: left;
+	position:relative;
+    width:689px; height:100%;
+    display: inline-block;
+    border:2px solid #F2FA98;
+    background-image:url('../images/arena1.jpg');
+    background-size: 50%;
+    background-color: #464646;
+}
+
+#player-menu{
+	box-sizing: border-box;
+	border: 1px solid #ffffff;
+	float: left;
+	width: 300px;
+	height: 100%;
+	margin-left: 10px;
+	position: relative;
+}
+
+
+#player-menu::after {
+    background-image: url("../images/grey.jpg");
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.64;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#player-menu .radios{
+	text-align: center;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.opponent{
+	position: absolute;
+	/*border-radius: 50%;*/
+	background-color: orange;
+	border: 1px solid black;
+	background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bullet{
+	position: absolute;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default !important;
+}
+
+
+.show-points {
+    margin-top: -30px;
+    margin-bottom: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10px;
+    z-index: 100;
+    position: relative;
+    font-weight: bold;
+}
+
+.points-default{
+	color : #5EFF00;
+}
+
+.points-damage{
+	color : red;
+}
+
+.points-magic{
+	color : blue;
+}
+
+.points-special{
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.health-bar{
+	margin-top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 3px;
+    border: 1px solid black;
+}
+
+.hp-bar-inside{
+	background-color: red;
+	height: 100%;
+}
+
+.beam{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: orange;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.6;
+	background-image: url('../images/fire.gif');
+}
+
+.beam-load{
+	background-image: url('../images/fire.gif');
+	position: absolute;
+	top: -9999;
+	left: -9999;
+}
+
+.start-form-container{
+	color: #ffffff;
+	width: 350px;
+	height: 220px;
+	border: 1px solid #ffffff;
+	background-image: url('../images/grey.jpg');
+	background-size: cover;
+	margin : 150px auto 0px auto;
+	display: table;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+
+.form-group{
+	padding: 5px;
+}
+
+.start-form-container .form-group{
+	text-align: center;	
+}
+
+.start-form-container #loginForm,
+.start-form-container #registerForm{
+	vertical-align: middle; 
+	display: table-cell;
+	padding-bottom: 11px;
+}
+
+.form-errors{
+	padding: 10px 0;
+	margin-bottom: 8px;
+	border-bottom: 1px solid #ffffff;
+	background-color: rgb(255, 54, 54);
+    background-color: rgba(255, 54, 54, 0.28);
+    display: none;
+}
+
+.form-errors ul{
+	margin: 0;
+}
+
+#loginForm .form-errors{
+	padding: 16px 0;
+}
+
+
+.show{
+	 display: block;
+}
+
+/**
+ * Chunky 3D Web Buttons
+ *
+ * Inspiration was taken from:
+ * - http://www.premiumpixels.com/freebies/chunky-3d-webbuttons-psd/
+ */
+ 
+/**
+ * Shadow
+ */
+.button::before {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: #959595 0 2px 5px;
+    -moz-box-shadow: #959595 0 2px 5px;
+    border-radius: 3px;
+    box-shadow: #959595 0 2px 5px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    padding: 2px 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    
+.button:active::before { padding: 1px 0 0; }
+
+/**
+ * Grey
+ */
+.button {
+    -moz-box-shadow: inset 0 0 0 1px #63ad0d;
+    -webkit-box-shadow: inset 0 0 0 1px #63ad0d;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #eee;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eee), to(#e2e2e2));
+    background: -moz-linear-gradient(#eee, #e2e2e2);
+    background: linear-gradient(#eee, #e2e2e2);
+    border: solid 1px #d0d0d0;
+    border-bottom: solid 3px #b2b1b1;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #f5f5f5;
+    color: #555;
+    display: inline-block;
+    font: bold 12px Arial, Helvetica, Clean, sans-serif;
+    /*margin: 0 25px 25px 0;*/
+    margin: 0
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fafafa; 
+    
+    }
+    
+.button:hover {
+    background: #e4e4e4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#ededed));
+    background: -moz-linear-gradient(#e4e4e4, #ededed);
+    background: linear-gradient(#e4e4e4, #ededed);
+    border: solid 1px #c2c2c2;
+    border-bottom: solid 3px #b2b1b1;
+    box-shadow: inset 0 0 0 1px #efefef; }
+    
+.button:active {
+    background: #dfdfdf;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dfdfdf), to(#e3e3e3));
+    background: -moz-linear-gradient(#dfdfdf, #e3e3e3);
+    background: linear-gradient(#dfdfdf, #e3e3e3);
+    border: solid 1px #959595;
+    box-shadow: inset 0 10px 15px 0 #c4c4c4;
+    top:2px;}
+
+/**
+ * Designmoo - Special Edition
+ */
+button.dsgnmoo {
+    background: #f97779;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f97779), to(#ce2424));
+    background: -moz-linear-gradient(#f97779, #ce2424);
+    background: linear-gradient(#f97779, #ce2424);
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    box-shadow: inset 0 0 0 1px #e67e7b;
+    color: #fff;
+    text-shadow: 0 1px 0 #bd2524; }
+    
+button.dsgnmoo:hover {
+    background: #ce2424;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+    background: -moz-linear-gradient(#ce2424, #f97779);
+    background: linear-gradient(#ce2424, #f97779);
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    box-shadow: inset 0 0 0 1px #e67e7b; }
+    
+button.dsgnmoo:active {
+    background: #ce2424;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+    background: -moz-linear-gradient(#ce2424, #f97779);
+    background: linear-gradient(#ce2424, #f97779);
+    border: solid 1px #be2424;
+    box-shadow: inset 0 10px 15px 0 #bd2524; }
+    
+    
+.button-small{
+	padding: 2px 14px;
+}
+
+.character-stats{
+    height: 385px;
+    margin: 25px auto 0;
+    width: 800px;
+    position: relative;
+}
+
+.dark-bcg{
+	background-image: url("../images/grey.jpg");
+    background-size: cover;
+}
+
+.opponent-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.opponent-name {
+    padding: 0 5px 10px;
+    text-align: center;
+}
+
+.character-table{
+	float: left;
+	font-size: 23px;
+}
+
+.character-table td:first-of-type{
+	font-weight: bold;
+}
+
+.character-skin{
+	float : right;
+	width: 260px;
+	height: 360px;
+	text-align: center;
+	position: relative;
+    padding: 10px;
+}
+
+.change-arrow{
+	cursor: pointer;	
+}
+
+.character-skin .change-arrow{
+	position: absolute;
+	top: 60px;
+}
+
+.arrow-previous{
+	
+}
+
+.arrow-next{
+	
+}
+
+.character-skin .arrow-previous {
+	left: 20px;
+}
+
+.character-skin .arrow-next{
+	right: 20px;
+}
+
+.skin-container{
+	padding-top: 20px;
+}
+
+.change-skin,
+.save-skin{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+
+.skin-img{
+	width: 180px;
+	height: 250px;
+	border: 1px solid #ffffff;
+	margin: 0 auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.skin-name{
+	font-weight: bold;
+}
+
+.container{
+	border: 2px solid #ffffff;
+    border-radius: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.bottom-info{
+	position: absolute;
+	bottom: 15px;
+    left: 19px;
+	width: 100%;
+}
+
+.round-big {
+    background-color: red;
+    background-image: url("../images/red.jpg");
+    background-size: 172% auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    height: 70px;
+    width: 70px;
+}
+
+#register .round-big,
+#login .round-big{
+	position: absolute;
+	top: 30px;
+	right: 60px;
+}
+
+.lp-options{
+	display : none;
+	min-width: 35px;
+}
+	
+.lp-change-button {
+	margin: 2px;
+    font-size: 9px;
+    font-weight: bold;
+    height: 17px;
+    padding: 0;
+    text-align: center;
+    width: 17px;
+}
+
+.character-table td{
+	padding: 8px;
+}
+
+.lp-plus{
+	float: left;
+}
+
+.lp-minus{
+	display: none;
+	float: right;
+}
+
+#abilities-save{
+	display: none;
+	position: absolute;
+	bottom: 4px;
+	right: 48px;
+}
+
+.arena-choice {
+	margin: 150px auto 0;
+    width: 500px;
+    height: 300px;
+}
+
+.opponent-form {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+    width: 58%;
+}
+
+.opponent-details {
+    box-sizing: border-box;
+    float: right;
+    padding: 10px;
+    width: 42%;
+    height: 200px;
+}
+
+.opponent-image-container{
+	height: 100%;
+	text-align: center;
+}
+
+.select-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.right-top-buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.radio-cell {
+    display: inline-block;
+    padding: 5px;
+}
+
+.radio-cell label {
+    display: block;
+    padding-bottom: 3px;
+}
+
+.radio-cell input[type="radio"], .radio-cell input[type="checkbox"] {
+    margin-left: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-title{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 3px;
+}
+
+.arena-info {
+    margin: 105px auto 0;
+    width: 900px;
+}
+
+.loader{
+
+    color: #ffffff;
+    background-color : rgb(0, 0, 0);
+    background-color : rgba(0, 0, 0, 0.95);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999999;
+}
+
+.loader-text {
+    padding-bottom: 50px;
+    font-size: 29px;
+}
+
+.loading-container {
+    height: 280px;
+    margin: 85px auto 0;
+    text-align: center;
+    width: 250px;
+}
+
+.loader-loading {
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 100%;
+}
+
+.simple-loading {
+    background-image: url("../images/simple-loading.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+}
+
+.opponent-details .simple-loading {
+  /*  top: -150px;*/
+}
+
+.preloaded{
+	position: absolute;
+	top: -9999;
+	left: -9999;
+}
